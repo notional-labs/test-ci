@@ -15,7 +15,7 @@ jobs:
       run: |
         echo "this is first test"
 
-    - name: Info
+    - name: Random exit
       run: |
         res=$(($RANDOM%2))
         if [ $res != "0" ]; then
@@ -34,7 +34,7 @@ jobs:
       run: |
         echo "this is second test"
 
-    - name: Info
+    - name: Random exit
       run: |
         res=$(($RANDOM%2))
         if [ $res != "0" ]; then
