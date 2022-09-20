@@ -12,10 +12,13 @@ queue_rules:
 pull_request_rules:
   - name: automerge to the base branch with label automerge and branch protection passing
     conditions:
-      - "#approved-reviews-by>=1"
+      - "#approved-reviews-by>=2"
       - base=main
       - label=A:automerge
-      - 
+      - check-success=test-11
+      - check-success=test-12
+      - check-success=test-21
+      - check-success=test-22
     actions:
       queue:
         name: default
